@@ -8,9 +8,6 @@ Fingerprint: ed61aa15
 
 I used Claude (Anthropic) during this exam to explain the task and the formulas in simple words. I did not use any other AI tool.
 
-> Fill in the three lines above from `my_data/DATA.md`. Do not rename headings or table columns: a script reads the numbers.
-> Write only in the empty cells and lines. Percentages as 0.78 or 78 %, money as plain numbers.
-
 ## AI-use declaration
 
 (About half a page: which assistants or tools you used and for what. If you used none, say so.)
@@ -19,19 +16,25 @@ I used Claude (Anthropic) during this exam to explain the task and the formulas 
 
 ### 1a. Metrics (all 60 questions)
 
-| config | recall@1 | recall@3 | recall@5 | MRR@10 |
+
+| Config | recall@1 | recall@3 | recall@5 | MRR@10 |
 |---|---|---|---|---|
-| A | | | | |
-| B | | | | |
+| A (paragraph) | 37/60 = 0.617 | 44/60 = 0.733 | 44/60 = 0.733 | 0.675 |
+| B (sentence window) | 31/60 = 0.517 | 43/60 = 0.717 | 48/60 = 0.800 | 0.622 |
+
 
 ### 1b. Recall and 95 % Wilson interval of each candidate (recall at its own k)
 
 | candidate | recall@k | lower | upper |
 |---|---|---|---|
-| A, k=3 | | | |
-| A, k=5 | | | |
-| B, k=3 | | | |
-| B, k=5 | | | |
+| A, k=3 | 44 | 0.733 | [0.610, 0.829] |
+| A, k=5 | 44 | 0.733 | [0.610, 0.829] |
+| B, k=3 | 43 | 0.717 | [0.592, 0.815] |
+| B, k=5 | 48 | 0.800 | [0.682, 0.882] |
+
+All four intervals overlap, so the data does not show that any candidate
+is better than another. (B, 5) has the highest recall, but its interval
+overlaps with all the others, so I cannot claim it is the winner.
 
 ### 1c. Annual model cost in USD
 
