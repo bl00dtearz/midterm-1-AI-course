@@ -52,11 +52,27 @@ are longer than English ones. Only the two B candidates fit the budget.
 
 ### 1d. Decision (at most 150 words)
 
-Chosen candidate:
+**Chosen candidate: (B, 3)**
 
-(Decision, using your intervals and the budget. Give the recall of your choice for EN, RU and KK separately.)
+Both A candidates are over the $29,800 budget ($35,400 and $48,714), so only
+B is possible. (B, 3) has recall 0.717 [0.592, 0.815] and (B, 5) has 0.800
+[0.682, 0.882]. The intervals overlap, so the data does not show that (B, 5)
+is better. I choose the cheaper one: $20,740 per year against $24,281.
+
+Recall of (B, 3) per language (20 questions each):
+- EN: 15/20 = 0.75 [0.531, 0.888]
+- RU: 19/20 = 0.95 [0.764, 0.991]
+- KK: 9/20 = 0.45 [0.258, 0.658]
+
+Kazakh users are served worst: for more than half of their questions the
+right chunk is not in the top 3.
 
 ### 1e. Next measurement (at most 60 words)
+
+Build a larger Kazakh-only test set (about 200 questions) and measure (B, 3)
+and (B, 5) on it. With 20 questions the Kazakh intervals are too wide. If (B, 5)
+is clearly better (intervals do not overlap), the extra $3,500 per year is
+justified and I would switch.
 
 ## Part 2: A document pipeline you can defend
 
