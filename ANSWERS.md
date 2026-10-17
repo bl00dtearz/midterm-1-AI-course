@@ -107,18 +107,18 @@ To: Head of Operations. Recommendation: pipeline L.
 
 ### Q1
 
-Number:
-Why (at most 40 words):
+Number: 0.90
+Why (at most 40 words): Characters grow only 1.13×, but bytes 2.25× (Cyrillic needs 2 bytes) and tokens 2.02×. Tokens grow slightly less than bytes, so the premium comes mostly from the encoding; the tokenizer only partly compensates.
 
 ### Q2
 
-Number:
-Why (at most 40 words):
+Number: 35.1
+Why (at most 40 words): An English chunk is 789 e5 tokens, so the last 277 are cut. Russian (384) and Kazakh (228) fit under 512. The cut part is never embedded, so its content cannot be retrieved, and no error is shown.
 
 ### Q3
 
-Number:
-Why (at most 40 words):
+Number: 66.6
+Why (at most 40 words): T only rescales scores: the ranking stays Monday, Friday, Sunday, holiday, Easter. All five tokens remain possible; low T just makes the top token much more likely. Removing tokens needs top-p or top-k.
 
 ### Q4
 
