@@ -87,7 +87,21 @@ Personal-data pages per year sent abroad under H: 1051200
 
 ### 2b. Memo (at most 300 words)
 
+To: Head of Operations. Recommendation: pipeline L.
 
+**Who is served worst.** With H, Kazakh degraded scans: 0.767 (23/30, interval 0.591–0.882). With L, Russian degraded scans: 0.667 (20/30, interval 0.488–0.808). The overall figures (0.883 and 0.800) hide these cells. The intervals overlap and each cell has only 30 invoices, so I am not sure which pipeline is really worse there.
+
+**Personal data.** In 32 % of pages an individual's name and ИИН are printed: 1,051,200 pages a year. ИИН is covered by Kazakhstan's law on personal data (No. 94-V).
+- H: the scan goes to a data centre abroad (known). Who stores it and for how long is unknown. A vendor's statement is not a compliance review, so we must find out from the contract and a legal check whether this transfer is allowed.
+- L: the scan stays on our server in Kazakhstan (known). We store it and we decide how long (known).
+
+**Safeguards we can verify.**
+- Delete scans and extracted data after 30 days; check the deletion log every month.
+- The server has no outgoing internet; test it from the server.
+- Only two named roles have access; review the access log.
+- Pages with low confidence go to a person; count them every month.
+
+**Choice.** I choose L. It costs $10,800 a year against $47,205, and no personal data leaves the country. Residual risk: L is less accurate, and in its worst cell about one invoice in three is wrong. We also become responsible for protecting the stored data. Before launch I would test more Russian degraded scans.
 
 ## Part 3: Explain your own numbers
 
