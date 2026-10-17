@@ -122,10 +122,10 @@ Why (at most 40 words): T only rescales scores: the ranking stays Monday, Friday
 
 ### Q4
 
-Number:
-Why (at most 40 words):
+Number: 25.4
+Why (at most 40 words): I left out arithmetic sequences and two-digit multiplication: their answers follow rules, not arbitrary facts seen once. The prompt "never invent a fact" adds no knowledge, so the bound stays; the model can only say "I don't know" more often.
 
 ### Q5
 
-Number:
-Why (at most 40 words):
+Number: 6.30
+Why (at most 40 words): This model has 126 tokens per parameter against Chinchilla's 20, so it is over-trained for its size. Chinchilla said GPT-3-like models are under-trained: too many parameters for too few tokens; both should grow together.
