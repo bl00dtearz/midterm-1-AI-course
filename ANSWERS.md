@@ -8,9 +8,6 @@ Fingerprint: ed61aa15
 
 I used Claude (Anthropic) during this exam to explain the task and the formulas in simple words. I did not use any other AI tool.
 
-## AI-use declaration
-
-(About half a page: which assistants or tools you used and for what. If you used none, say so.)
 
 ## Part 1: Retrieval and cost decision
 
@@ -38,12 +35,20 @@ overlaps with all the others, so I cannot claim it is the winner.
 
 ### 1c. Annual model cost in USD
 
-| candidate | annual cost |
-|---|---|
-| A, k=3 | |
-| A, k=5 | |
-| B, k=3 | |
-| B, k=5 | |
+Cost of one request in language ℓ = (input tokens × $3 + output tokens × $15) / 1,000,000,
+where input tokens = 206 (system) + question_ℓ + k × chunk_ℓ.
+Annual cost = Σ (traffic share_ℓ × cost_ℓ) × 13,500 requests/day × 365.
+
+| candidate | annual cost $ | Budget $29,800 |
+|---|---|---|
+| A, k=3 | 35,400 | over budget |
+| A, k=5 | 48,714 | over budget |
+| B, k=3 | 20,740 | within budget |
+| B, k=5 | 24,281 | within budget |
+
+Both A candidates are too expensive because paragraph chunks are about
+4 times longer than sentence-window chunks and Russian and Kazakh chunks
+are longer than English ones. Only the two B candidates fit the budget.
 
 ### 1d. Decision (at most 150 words)
 
